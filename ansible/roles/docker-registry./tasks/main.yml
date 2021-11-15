@@ -1,0 +1,13 @@
+---
+# tasks file for docker-registry.
+- name: Log into DockerHub
+  docker_login:
+    username: 4arctic1
+    password: cloud arctic
+    
+- name: Tag and Push to docker hub
+  docker_image:
+    name: 4arctic1/myapp
+    repository: 4arctic1/myapp
+    tag: latest
+    push: yes
